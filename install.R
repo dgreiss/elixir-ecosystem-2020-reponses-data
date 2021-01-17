@@ -1,0 +1,6 @@
+install.package("tidyverse")
+install.package("ggplot2")
+install.package("gridExtra")
+install.package("scales")
+install.package("janitor")
+install.package("stringr")

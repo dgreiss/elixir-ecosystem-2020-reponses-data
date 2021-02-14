@@ -1,7 +1,7 @@
 # Fork of Elixir Ecosystem 2020 Response Data
 This is a quick look at the Elixir Ecosystem Survey 2020. Data was obtained from Hugo Baraúna's GitHub [repo](https://github.com/hugobarauna/elixir-ecosystem-2020-reponses-data).
 
-The Jupyter notebook is published as a Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dgreiss/elixir-ecosystem-2020-reponses-data/HEAD) or can be viewed statically using [NBViewer](https://nbviewer.jupyter.org/github/dgreiss/elixir-ecosystem-2020-reponses-data/blob/main/Elixir%20Ecosystem%20Survey%202020%20Notebook.ipynb).
+The Jupyter notebook is published as a Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dgreiss/elixir-ecosystem-2020-reponses-data/HEAD?filepath=notebook%2F) or can be viewed statically using [NBViewer](https://nbviewer.jupyter.org/github/dgreiss/elixir-ecosystem-2020-reponses-data/blob/main/notebook/Elixir%20Ecosystem%20Survey%202020%20Notebook.ipynb).
 
 # Elixir Ecosystem 2020 reponses data
 This repo contains the raw and processed data from the responses of [The Elixir Ecosystem Survey 2020](https://elixirsurvey.typeform.com/report/yYmJv1/OcCCilUmDn8lBpgP).

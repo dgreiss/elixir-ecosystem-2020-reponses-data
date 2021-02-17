@@ -1,4 +1,4 @@
-summarize_survey() <- function(df) {
+summarize_survey <- function(df) {
   df %>%
     mutate(answer = forcats::fct_lump_n(answer, 14, ties.method = "first")) %>%
     group_by(answer) %>%

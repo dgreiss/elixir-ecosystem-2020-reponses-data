@@ -2,8 +2,8 @@ source("./src/packages.R")
 source("./src/utils.R")
 source("./src/load_data.R")
 
-# long <-
-raw %>%
+long <-
+  raw %>%
   mutate(`How are you using Phoenix?` = NA, .after = 170) %>%
   mutate(`If your team is enforcing code formatting what methods do you use?` = NA, .after = 162) %>%
   mutate(`If your project(s) uses Continuous Integration which is it?` = NA, .after = 150) %>%
@@ -37,7 +37,6 @@ raw %>%
   left_join(questions, by = c("question_raw" = "question")) %>%
   fill(id) %>%
   left_join(questions, by = c("id" = "id")) %>%
-
   # Remove missing answers
   filter(
     !is.na(answer),

@@ -12,7 +12,7 @@ long <-
   mutate(`What database do you primarily use?` = NA, .after = 129) %>%
   mutate(`How do you debug?` = NA, .after = 123) %>%
   mutate(`Which reasons prevented Elixir from being adopted at your company?` = NA, .after = 112) %>%
-  mutate(`question_34?` = NA, .after = 106) %>%
+  mutate(`What outcomes did your team experience after adopting Elixir?` = NA, .after = 106) %>%
   mutate(`Did your company migrate from another language / framework?` = NA, .after = 97) %>%
   mutate(`In what capacities is your company using Elixir?` = NA, .after = 92) %>%
   mutate(`Which Elixir newsletters are you subscribed to?` = NA, .after = 82) %>%
@@ -24,12 +24,11 @@ long <-
   mutate(`Which language did you change to?` = NA, .after = 8) %>%
   mutate(`Can you share why you stopped using or never used Elixir?` = NA, .after = 2) %>%
   pivot_longer(
-    !c(`#`, contains("UTC"), `Network ID`),
+    !c(`#`, contains("UTC", ignore.case = FALSE), `Network ID`),
     names_to = "question_raw",
     values_to = "answer"
   ) %>%
   janitor::clean_names() %>%
-  mutate(question_raw = ifelse(question_raw == "question_34", "What outcomes did your team experience after adopting Elixir?", question_raw)) %>%
   ##########################
   # Key transformation occurs here
   # Joins the choices and free text answers to the appropriate quesiton
@@ -52,6 +51,7 @@ long <-
 
 survey_plots <-
   long %>%
+  arrange(question_id) %>%
   group_by(question_id, question) %>%
   nest() %>%
   mutate(
